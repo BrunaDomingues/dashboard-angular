@@ -44,31 +44,7 @@ Dashboard interativo para análise de dados de e-commerce desenvolvido com Angul
 - **Gráficos:** Chart.js com ng2-charts
 - **Estado:** BehaviorSubject para comunicação entre componentes
 
-## 📁 Estrutura do Projeto
 
-```
-dashboard-angular/
-├── backend/                 # API NestJS
-│   ├── src/
-│   │   ├── charts/         # Módulo de gráficos
-│   │   ├── orders/         # Módulo de pedidos
-│   │   └── app.module.ts   # Módulo principal
-│   └── package.json
-├── frontend/               # Aplicação Angular
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── components/
-│   │   │   │   ├── dashboard/           # Componente principal
-│   │   │   │   ├── filter/              # Componente de filtros
-│   │   │   │   └── charts/
-│   │   │   │       └── sales-by-category/ # Gráfico de vendas
-│   │   │   └── services/
-│   │   │       ├── api.service.ts       # Comunicação com backend
-│   │   │       └── shared.service.ts    # Estado compartilhado
-│   │   └── styles.scss
-│   └── package.json
-└── README.md
-```
 
 ## 🚀 Como Executar
 
@@ -80,7 +56,7 @@ dashboard-angular/
 
 1. **Navegar para o diretório do backend:**
    ```bash
-   cd backend
+   cd frontend/api
    ```
 
 2. **Instalar dependências:**
