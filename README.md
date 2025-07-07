@@ -168,24 +168,24 @@ GET /api/charts/sales-by-category?startDate=2023-01-01&endDate=2023-01-31&catego
 - [x] Gráfico de vendas por categoria (Chart.js)
 - [x] Layout responsivo do dashboard
 - [x] Comunicação entre componentes via serviços
-- [x] Interface moderna com Angular Material
-
-### 🚧 Em Desenvolvimento
+- [x] Interface moderna com Bootstrap
 - [x] Gráfico de vendas ao longo do tempo (linhas)
 - [x] Gráfico de métricas de desempenho (rosca)
 - [x] Gráfico de tráfego por canal (radar)
 - [x] Tabela de pedidos com paginação e ordenação
+
+### 🚧 Em Desenvolvimento
+
 - [x] Melhorias no sistema de filtros
 - [x] Testes unitários e de integração
 
 ## 🎯 Próximos Passos
 
-1. **Implementar gráficos restantes** usando Chart.js
-2. **Criar componente de tabela** com Angular Material
-3. **Adicionar testes** unitários e de integração
-4. **Melhorar tratamento de erros** e loading states
-5. **Implementar persistência** de filtros
-6. **Adicionar funcionalidades de exportação** (CSV, imagens)
+1. **Adicionar testes** unitários e de integração
+2. **Melhorar tratamento de erros** e loading states
+3. **Implementar persistência** de filtros
+4. **Adicionar funcionalidades de exportação** (CSV, imagens)
+5. **Implementar possibilidade de importar dados e mostrar nos gráficos** (CSV ou JSON)
 
 ## 📝 Notas de Desenvolvimento
 
