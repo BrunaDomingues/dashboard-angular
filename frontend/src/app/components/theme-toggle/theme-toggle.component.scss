@@ -1,0 +1,116 @@
+.theme-toggle {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  color: #475569;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  color: #475569;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .theme-toggle,
+.theme-toggle.dark-theme {
+  background-color: white !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+body.dark-mode .theme-toggle:hover,
+.theme-toggle.dark-theme:hover {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.dark-mode .theme-toggle:focus,
+.theme-toggle.dark-theme:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
+}
+
+body.dark-mode .theme-toggle i,
+.theme-toggle.dark-theme i {
+  color: #475569 !important;
+}
+
+body.light-mode .theme-toggle,
+.theme-toggle.light-theme {
+  background-color: #14151a !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+body.light-mode .theme-toggle:hover,
+.theme-toggle.light-theme:hover {
+  background-color: #26282d !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.light-mode .theme-toggle:focus,
+.theme-toggle.light-theme:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
+}
+
+body.light-mode .theme-toggle i,
+.theme-toggle.light-theme i {
+  color: white !important;
+}
+
+.theme-toggle i.bi-sun-fill {
+  animation: rotate 0.5s ease-in-out;
+}
+
+.theme-toggle i.bi-moon-fill {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-toggle:hover i {
+  transform: scale(1.1);
+}
+
+body.dark-mode .theme-toggle:hover i,
+.theme-toggle.dark-theme:hover i {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
+body.light-mode .theme-toggle:hover i,
+.theme-toggle.light-theme:hover i {
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+} 

@@ -1,0 +1,7 @@
+[
+  { "category": "Eletrônicos", "sales": 12500, "items": 320 },
+  { "category": "Roupas", "sales": 8400, "items": 510 },
+  { "category": "Alimentos", "sales": 6200, "items": 780 },
+  { "category": "Livros", "sales": 4300, "items": 290 },
+  { "category": "Casa", "sales": 9200, "items": 410 }
+] 

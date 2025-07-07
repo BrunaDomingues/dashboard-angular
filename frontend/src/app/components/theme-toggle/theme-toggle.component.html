@@ -1,0 +1,11 @@
+<div class="theme-toggle" 
+     [class.dark-theme]="currentTheme === 'dark'"
+     [class.light-theme]="currentTheme === 'light'"
+     (click)="toggleTheme()" 
+     [title]="getTooltipText()"
+     role="button"
+     tabindex="0"
+     (keydown.enter)="toggleTheme()"
+     (keydown.space)="toggleTheme()">
+  <i [class]="getIconClass()"></i>
+</div> 

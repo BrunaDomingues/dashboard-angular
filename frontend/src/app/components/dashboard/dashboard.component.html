@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+  <!-- Header do Dashboard -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <span class="navbar-brand">Dashboard de E-commerce</span>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <app-theme-toggle></app-theme-toggle>
+        <app-filter></app-filter>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo do Dashboard -->
+  <div class="container-fluid p-4">
+    <!-- Grid de Gráficos -->
+    <div class="row g-4 mb-4">
+      <!-- Gráfico 1: Vendas por Categoria -->
+      <div class="col-lg-6 col-xl-3">
+        <app-sales-by-category></app-sales-by-category>
+      </div>
+
+      <!-- Gráfico 2: Vendas ao Longo do Tempo -->
+      <div class="col-lg-6 col-xl-3">
+        <app-sales-trend></app-sales-trend>
+      </div>
+
+      <!-- Gráfico 3: Métricas de Desempenho -->
+      <div class="col-lg-6 col-xl-3">
+        <app-performance-metrics></app-performance-metrics>
+      </div>
+
+      <!-- Gráfico 4: Tráfego por Canal -->
+      <div class="col-lg-6 col-xl-3">
+        <app-traffic-channels></app-traffic-channels>
+      </div>
+    </div>
+
+    <!-- Tabela de Pedidos -->
+    <div class="row">
+      <div class="col-12">
+        <app-orders-table></app-orders-table>
+      </div>
+    </div>
+  </div>
+</div> 

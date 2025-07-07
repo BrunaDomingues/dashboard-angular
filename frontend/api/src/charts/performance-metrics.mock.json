@@ -1,0 +1,6 @@
+[
+  { "metric": "Taxa de Conversão", "value": 2.5, "target": 3.0 },
+  { "metric": "Ticket Médio", "value": 145.80, "target": 160.00 },
+  { "metric": "Rejeição", "value": 8.2, "target": 5.0 },
+  { "metric": "Satisfação", "value": 4.3, "target": 4.5 }
+] 

@@ -1,0 +1,149 @@
+<div class="filter-container">
+  <!-- Botão para abrir/fechar filtros -->
+  <button class="btn btn-primary filter-toggle-btn" (click)="toggleFilter()">
+    <i class="bi bi-funnel"></i>
+    Filtros Avançados
+  </button>
+
+  <!-- Modal de filtros -->
+  <div class="modal fade" [class.show]="isOpen" [style.display]="isOpen ? 'block' : 'none'" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Filtros Avançados</h5>
+          <button type="button" class="btn-close" (click)="toggleFilter()"></button>
+        </div>
+        
+        <form [formGroup]="filterForm" class="modal-body">
+          <!-- Período de Datas -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h6 class="mb-0">Período</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="startDate">Data Inicial</label>
+                  <input id="startDate" type="date" class="form-control" formControlName="startDate">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="endDate">Data Final</label>
+                  <input id="endDate" type="date" class="form-control" formControlName="endDate">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="startTime">Hora Inicial</label>
+                  <input id="startTime" type="time" class="form-control" formControlName="startTime">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="endTime">Hora Final</label>
+                  <input id="endTime" type="time" class="form-control" formControlName="endTime">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categorias -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h6 class="mb-0">Categorias</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" *ngFor="let category of categories">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" 
+                           [value]="category" 
+                           [checked]="filterForm.get('categories')?.value?.includes(category)"
+                           (change)="onCategoryChange($event, category)" id="category-{{ category }}">
+                    <label class="form-check-label" [for]="'category-' + category">
+                      {{ category }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h6 class="mb-0">Status</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6" *ngFor="let status of statuses">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" 
+                           [value]="status" 
+                           [checked]="filterForm.get('statuses')?.value?.includes(status)"
+                           (change)="onStatusChange($event, status)"
+                           [id]="'status-' + status">
+                    <label class="form-check-label" [for]="'status-' + status">
+                      {{ status }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Métodos de Pagamento -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h6 class="mb-0">Métodos de Pagamento</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4" *ngFor="let method of paymentMethods">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                           [value]="method" 
+                           [checked]="filterForm.get('paymentMethods')?.value?.includes(method)"
+                           (change)="onPaymentMethodChange($event, method)"
+                           [id]="'paymentMethod-' + method">
+                    <label class="form-check-label" [for]="'paymentMethod-' + method">
+                      {{ method }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Faixa de Valores -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h6 class="mb-0">Faixa de Valores</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Valor Mínimo</label>
+                  <input type="number" class="form-control" formControlName="minAmount">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Valor Máximo</label>
+                  <input type="number" class="form-control" formControlName="maxAmount">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="clearFilters()">
+            Limpar Filtros
+          </button>
+          <button type="button" class="btn btn-primary" (click)="applyFilters()">
+            Aplicar Filtros
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backdrop -->
+  <div class="modal-backdrop fade show" *ngIf="isOpen" (click)="toggleFilter()"></div>
+</div> 
