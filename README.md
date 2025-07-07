@@ -3,6 +3,11 @@
 Dashboard interativo para análise de dados de e-commerce desenvolvido com Angular (frontend) e NestJS (backend).
 
 ## 🚀 Funcionalidades
+### Light Mode
+![Dashboard Light Mode](docs/dashboard-light.png)
+
+### Dark Mode  
+![Dashboard Dark Mode](docs/dashboard-dark.png)
 
 - **4 Gráficos Interativos:**
   - Vendas por Categoria (Gráfico de Barras)
